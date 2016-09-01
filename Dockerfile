@@ -4,12 +4,12 @@ MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN wget -q -O /tmp/presto.tar.gz https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.150/presto-server-0.150.tar.gz && \
+RUN wget -q -O /tmp/presto.tar.gz https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.152/presto-server-0.152.tar.gz && \
     mkdir -p /opt/presto && \
     tar zxf /tmp/presto.tar.gz -C /opt/presto && \
     rm /tmp/presto.tar.gz
 
-ENV HOME /opt/presto/presto-server-0.150
+ENV HOME /opt/presto/presto-server-0.152
 
 WORKDIR $HOME
 
